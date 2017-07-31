@@ -1,0 +1,42 @@
+header {
+	border: solid black 1px;
+}
+
+.game-title {
+	font-size: 1.75em;
+}
+
+main {
+	margin-top: 5%;
+}
+
+.game-section {
+	border: solid black 1px;
+	height: 40vh;
+}
+
+#gameplay-div {
+	display: none;
+}
+
+@media screen and (orientation: landscape) and (max-width: 767px) {
+	.game-section {
+		height: 35vh;
+	}
+}
+
+@media screen and (min-width: 374px) {
+	.game-title {
+		font-size: 2em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.game-title {
+		font-size: 3em;
+	}
+
+	.game-section {
+		height: 80vh;
+	}
+}
