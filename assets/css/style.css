@@ -19,6 +19,10 @@ main {
 	display: none;
 }
 
+.used-div {
+	border: solid black 1px;
+}
+
 @media screen and (orientation: landscape) and (max-width: 767px) {
 	.game-section {
 		height: 35vh;
