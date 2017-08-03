@@ -5,7 +5,8 @@
   	<meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Hangman</title>
   	<link rel="stylesheet" href="assets/css/reset.css" type="text/css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
   </head>
   <body>
@@ -21,29 +22,33 @@
   	<main>
   		<div class="container-fluid">
   			<div class="row">
-  				<section class="col-xs-12 col-sm-5 col-sm-offset-1 game-section">
-  					<h1>test</h1>
-  				</section>
-  				<section class="col-xs-12 col-sm-5 game-section">
+  			  <section class="col-xs-12 col-sm-10 col-sm-offset-1 game-section">
   					<div id="start-div">
-  						<p>King Joffrey wants your head unless you can guess the name of one of his enemies!</p>
+  						<h2 class="game-text-1">King Joffrey wants your head!</h2> 
+              <h3 class="game-text-2">if you can guess the name of one of his enemies he'll let you go free!</h3>
+  						
+  						<h3>Guess correctly before Joffrey throws you in his dungeon!</h3>
   						<br>
-  						<p>you have 10 guesses before Joffrey throws you in his dungeon!</p>
-  						<br>
-  						<p>click any key to begin!</p>
+  						<h2 class="press-start">press any key to begin!</h2>
   					</div>
   					<div id="gameplay-div">
-  						<h3>guess the name</h3>
+  						<h3>Choose a letter and try to guess the name of a character from</h3>     <h3>Game of Thrones</h3>
+              <h4 class="guess-text">you have <span id="guess-span">0</span> guesses left</h4>
   					</div>
-            <div>
+            <div id="game-img-div" class="col-sm-6 col-sm-offset-3">
+              <img src="./assets/images/Joffrey-1.jpg" class= "img-responsive game-image">
+            </div>
+            <div id="play-div">
               <h3 id="first"></h3>
               <h3 id="last"></h3>
-              <div class="used-div col-xs-12">
+              <div class="used-div col-xs-12" id="used-div">
                 <h4>Used Letters</h4>
-                <p id="used"></p>
+                <h4 id="used"></h4>
               </div>
+
             </div>
-  				</section>
+          </section>
+          
   			</div>
   		</div>
   	</main>

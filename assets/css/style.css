@@ -1,26 +1,103 @@
+* {
+	font-family: 'Cinzel', serif;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("../images/dark-clouds.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #C0C0C0;
+}
+
 header {
 	border: solid black 1px;
+	background-image: url("../images/tex2res4.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .game-title {
-	font-size: 1.75em;
+	font-size: 1.6em;
+	font-weight: 700;
+	
 }
 
 main {
-	margin-top: 5%;
+	
+	
+}
+
+.game-image {
+	margin-top: 15px;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .game-section {
 	border: solid black 1px;
-	height: 40vh;
+	height:90vh;
+}
+
+#game-img-div {
+	display: none;
+	height:35vh;
+	margin-top: 10vh;
+}
+
+#start-div {
+	text-align: center;
+	
 }
 
 #gameplay-div {
+	margin-top: 10vh;
+	display: none;
+	text-align: center;
+}
+
+#play-div {
+	margin-top: 5vh;
+}
+
+#first {
+	width: 100%;
+	text-align: center;
+}
+
+#last {
+	width: 100%;
+	text-align: center;
+}
+
+#used-div {
 	display: none;
 }
 
 .used-div {
-	border: solid black 1px;
+	height: 25vh;
+	border: solid #C0C0C0 1px;
+	margin-top: 10vh;
+}
+
+.guess-text {
+	margin-top: 5vh;
+}
+
+.game-text-1 {
+	margin-top: 10vh;
+}
+
+.game-text-2 {
+	margin-top: 20vh;
+}
+
+.press-start {
+	font-weight: 700;
+	margin-top: 20vh;
 }
 
 @media screen and (orientation: landscape) and (max-width: 767px) {
@@ -40,7 +117,5 @@ main {
 		font-size: 3em;
 	}
 
-	.game-section {
-		height: 80vh;
-	}
+	
 }
