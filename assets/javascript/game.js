@@ -97,11 +97,12 @@ var game = {
 	},
 	winOrLose: function() {
 		if(this.guesses < 1) {
+			var lossName = "./assets/images/joffrey.jpg";
 			//this.gameOver = true;
 			document.getElementById("g-o-t").style.display = "none";
 			document.getElementById("guess-text").style.display = "none";
-			document.getElementById("gameplay-text").innerHTML = "<h1>Your guess was wrong!</h1><h2>Enjoy the dungeons!</h2><h4>Or try again!</h4>";
-			document.getElementById("game-img-div").style.display = "block";
+			document.getElementById("gameplay-text").innerHTML = "<h2>Your guess was wrong!</h2><h3>Enjoy the dungeons!</h3><h4>Or try again!</h4>";
+			document.getElementById("img-wrapper").innerHTML = '<img src=' + lossName + ' class="img-responsive game-image">'
 			this.reset();
 		}
 		if(this.firstSpaces.indexOf("_") === -1 && this.lastSpaces.indexOf("_") === -1) {
@@ -127,6 +128,7 @@ var game = {
 		document.getElementById('used').innerHTML = this.guessedLetters;
 		this.chooseName();
 		this.keyChooser();	
+		
 	}
 }
 
