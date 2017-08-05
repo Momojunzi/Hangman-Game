@@ -13,18 +13,20 @@ var game = {
 	gameNames: [
 				"Jon Snow", "Robb Stark", "Eddard Stark", "Arya Stark", "Brandon Stark", 
 				"Daenerys Targaryen", "Petyr Baelish","Tyrion Lannister", "Theon Greyjoy", 
-				"Jorah Mormont", "Stannis Baratheon", "Catelyn Stark"
+				"Jorah Mormont", "Stannis Baratheon", "Catelyn Stark", "Sansa Stark", 
 			   ],
 	startGame: function() {
 		var startDiv = document.getElementById("start-div");
 		var gameplay = document.getElementById("gameplay-div");
 		var usedDiv = document.getElementById("used-div");
+		var dashesDiv = document.getElementById("dashes-div");
 		console.log(this.gameStarted);
 		document.onkeyup = function(event) {
 			if(game.gameStarted === false) {
 				startDiv.style.display = "none";
 				gameplay.style.display = "block";
 				usedDiv.style.display = "block";
+				dashesDiv.style.display = "block";
 				game.gameStarted = true;
 				game.chooseName();
 				game.keyChooser();
@@ -93,17 +95,33 @@ var game = {
 	},
 	winOrLose: function() {
 		if(this.guesses < 1) {
-			this.gameOver = true;
-			document.getElementById("play-div").style.display = "none";
-			document.getElementById("gameplay-div").innerHTML = "<h1>Joffrey is angry! You did not guess correctly!</h1><h2>Enjoy your stay in the dungeons!</h2>";
+			//this.gameOver = true;
+			document.getElementById("g-o-t").style.display = "none";
+			document.getElementById("guess-text").style.display = "none";
+			document.getElementById("gameplay-text").innerHTML = "<h1>Your guess was wrong!</h1><h2>Enjoy the dungeons!</h2><h4>Or try again!</h4>";
 			document.getElementById("game-img-div").style.display = "block";
+			this.reset();
 		}
 		if(this.firstSpaces.indexOf("_") === -1 && this.lastSpaces.indexOf("_") === -1) {
-			this.gameOver = true;
-			document.getElementById("play-div").style.display = "none";
-			document.getElementById("gameplay-div").innerHTML = "<h1>You survived another day!</h1><h2> You win! For Now...</h2>";
+			//this.gameOver = true;
+			document.getElementById("g-o-t").style.display = "none";
+			document.getElementById("guess-text").style.display = "none";
+			document.getElementById("gameplay-text").innerHTML = "<h1>You survived Joffrey!</h1><h2>For Now...</h2><h4>Press your luck, try again.</h4>";
 			document.getElementById("game-img-div").style.display = "block";
+			this.reset();
 		}
+	},
+	//need to add a restart function
+	reset: function() {
+		this.nameArr = [];
+		this.guessedLetters = [];
+		this.formattedName = [[],[]];
+		this.firstSpaces = [];
+		this.lastSpaces = [];
+		this.chosenKey = '';
+		document.getElementById('used').innerHTML = this.guessedLetters;
+		this.chooseName();
+		this.keyChooser();	
 	}
 }
 

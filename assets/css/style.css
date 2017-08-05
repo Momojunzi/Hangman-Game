@@ -1,118 +1,150 @@
 * {
 	font-family: 'Cinzel', serif;
 	box-sizing: border-box;
+	text-align: center;
+}
+
+html, body {
+	height: 100%;
 }
 
 body {
 	background-image: url("../images/dark-clouds.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover contain;
 	color: #C0C0C0;
+	
 }
 
 header {
-	border: solid black 1px;
-	background-image: url("../images/tex2res4.png");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: black;
+	opacity: .5;
+	border-bottom: solid #C0C0C0 1px;
+}
+
+.start-div {
+	min-height: 100%;
+}
+
+.start-img-div {
+	margin-top: 40px;
 }
 
 .game-title {
+	color: #ffffff;
 	font-size: 1.6em;
 	font-weight: 700;
-	
-}
-
-main {
-	
-	
-}
-
-.game-image {
-	margin-top: 15px;
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
+	opacity: 1;	
 }
 
 .game-section {
 	border: solid black 1px;
-	height:90vh;
+}
+
+.guess-text {
+	margin-top: 20px;
+}
+
+#guess-span: {
+	color: red;
 }
 
 #game-img-div {
 	display: none;
-	height:35vh;
-	margin-top: 10vh;
 }
 
-#start-div {
-	text-align: center;
-	
+.img-row {
+	margin-top: 25px;
 }
 
 #gameplay-div {
-	margin-top: 10vh;
 	display: none;
-	text-align: center;
+	margin-top: 50px;
+	border: solid #C0C0C0 1px;
+	background: black;
+	opacity: 0.5;
+	height: 25vh;
 }
 
-#play-div {
-	margin-top: 5vh;
-}
-
-#first {
-	width: 100%;
-	text-align: center;
-}
-
-#last {
-	width: 100%;
-	text-align: center;
+#dashes-div {
+	margin-top: 50px;
+	height: 25vh;
+	border: solid #C0C0C0 1px;
+	display: none;
+	background: black;
+	opacity:0.5;
 }
 
 #used-div {
+	margin-top: 50px;
+	text-align: left;
 	display: none;
-}
-
-.used-div {
 	height: 25vh;
 	border: solid #C0C0C0 1px;
-	margin-top: 10vh;
+	background: black;
+	opacity:0.5;
 }
 
-.guess-text {
-	margin-top: 5vh;
+.used-title {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: solid #C0C0C0 1px;
+	font-weight: 700;
 }
 
-.game-text-1 {
-	margin-top: 10vh;
+.used {
+	text-align: left;
+	color: #ffffff;
+	opacity: 1.0;
 }
 
-.game-text-2 {
-	margin-top: 20vh;
+.first-last {
+	color: #ffffff;
+	opacity: 1.0;
+}
+
+#first { 
+	text-align: right;
+}
+
+#last {
+	text-align: left;
 }
 
 .press-start {
 	font-weight: 700;
-	margin-top: 20vh;
+
 }
 
-@media screen and (orientation: landscape) and (max-width: 767px) {
-	.game-section {
-		height: 35vh;
+@media (max-width: 767px) and (orientation: landscape) {
+	#gameplay-div, #used-div, #dashes-div {
+		height: 40vh;
 	}
 }
 
-@media screen and (min-width: 374px) {
+@media (max-width: 767px) {
+	#first { 
+		text-align: center;
+	}
+
+	#last {
+		text-align: center;
+	}
+
+	#used-div { margin-bottom: 25px; }
+
+	#gameplay-text h1 {font-size: 1.5em;}
+}
+
+@media (min-width: 374px) {
 	.game-title {
 		font-size: 2em;
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
 	.game-title {
 		font-size: 3em;
 	}
