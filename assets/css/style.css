@@ -58,6 +58,10 @@ header {
 	margin-top: 25px;
 }
 
+#g-o-t {
+	font-weight: 700;
+}
+
 #gameplay-div {
 	display: none;
 	margin-top: 50px;
