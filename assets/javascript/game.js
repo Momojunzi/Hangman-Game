@@ -99,19 +99,14 @@ var game = {
 		var guessCounter = document.getElementById("guess-text");
 		if(this.guesses < 1) {
 			var lossName = "./assets/images/joffrey.jpg";
-			//this.gameOver = true;
 			document.getElementById("g-o-t").style.display = "none";
-			//document.getElementById("guess-text").style.display = "none";
 			document.getElementById("gameplay-text").innerHTML = "<h4>Your guess was wrong!</h4><h4>Enjoy the dungeons!</h4><h4>Or try again!</h4>";
 			document.getElementById("img-wrapper").innerHTML = '<img src=' + lossName + ' class="img-responsive game-image">'
 			this.reset();
 		}
 		if(this.firstSpaces.indexOf("_") === -1 && this.lastSpaces.indexOf("_") === -1) {
-			//this.gameOver = true;
 			var winName = "./assets/images/" + this.firstSpaces.join('') + ".jpg";
-			console.log(winName);
 			document.getElementById("g-o-t").style.display = "none";
-			//document.getElementById("guess-text").style.display = "none";
 			document.getElementById("gameplay-text").innerHTML = "<h4>You survived Joffrey!</h4><h4>For Now...</h4><h4>Press your luck, try again.</h4>";
 			document.getElementById("img-wrapper").innerHTML = '<img src=' + winName + ' class="img-responsive game-image">'
 			console.log(document.getElementById("game-img-div").getAttribute("src"));
